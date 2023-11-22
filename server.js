@@ -2,16 +2,35 @@ const express = require("express");
 const app = express;
 
 const PORT = process.env.PORT || 3000;
+const router = require("/routes")
+
 
 const mockProfile = {
     name: "Bootcamp",
     viewCount:600
 }
+app.use(express.json())
+app.use(express.urlencoded({extended:true}))
+
+app.use("/", router)
+
 //MVC
 //VIEWs (API,HTML)
-app.get("/api/profile", (req, res) => {
-    res.json(mockProfile)
-})
+app.use(express.json())
+app.use(express.urlencoded({extended:true}))
+
+app.use("/", router)
+
+//CRUD
+//GET
+// app.get("/api/profile", (req, res) => {
+//     res.json(mockProfile)
+// })
+
+// //Create Profile
+// app.post("/api/profile", (req, res) => {
+//     res.json(mockProfile)
+// })
 
 
 
