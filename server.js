@@ -9,7 +9,7 @@ const mockProfile = {
 }
 //MVC
 //VIEWs (API,HTML)
-app.get("/api/profile", (req,res) => {
+app.get("/api/profile", (req, res) => {
     res.json(mockProfile)
 })
 
