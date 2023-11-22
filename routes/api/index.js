@@ -1,13 +1,8 @@
 const express = require("express");
-const router = express.Router();
-const apiRouter = require('./api')
+const router = express.Router()
+const profileRouter = require('./profile')
 
-//APIs
-router.use('/api.', apiRouter)
-
-//views (Public)
-router.use(express.static(__dirname + "public"))
-
-
+// All profile routes..
+router.use('/profile', profileRouter)
 
 module.exports = router;

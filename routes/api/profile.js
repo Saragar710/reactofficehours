@@ -1,20 +1,23 @@
 const express = require("express");
-const router = express.Router;
+const router = express.Router()
 
-
+//Mock Profile data..
 const mockProfile = {
     name: "Bootcamp",
-    viewCount:600
+    endorsedCount: 600
 }
-//Get
+
+// GET  /api/profile
 router.get("/", (req, res) => {
     res.json(mockProfile)
 })
 
-router.post("/", (req, res) =>{
+
+//POST 
+router.post("/", (req, res) => {
     const newProfile = req.body;
-    newProfile.id = "465416253749dfsf";
-    res.json(mockProfile)
+    newProfile.id = "465416541adfsf";
+    res.json(newProfile)
 })
 
 module.exports = router;
