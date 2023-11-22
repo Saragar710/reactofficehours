@@ -14,7 +14,15 @@ app.get("/api/profile", (req,res) => {
 })
 
 
-app.get()
-app.get("/", (req,res) => res.send(`HTML is under construction..`))
+
+// app.get("/", (req,res) => res.send(`HTML is under construction..`))
+
+// app.get("/css/app.css", (req, res) => {
+//     res.sendFile(__dirname + `/public/css/app.css`)
+// })
+// app.get("/css/app.css", (req, res) => {
+//     res.sendFile(__dirname + `/public/images/vite.svg`)
+// })
+app.use(express.static("public"))
 
 app.listen(PORT, () => console.log('Server is listening on ${PORT}'))
