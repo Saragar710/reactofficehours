@@ -12,6 +12,8 @@ router.get("/", (req, res) => {
 })
 
 router.post("/", (req, res) =>{
+    const newProfile = req.body;
+    newProfile.id = "465416253749dfsf";
     res.json(mockProfile)
 })
 
